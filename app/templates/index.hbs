@@ -1,0 +1,5 @@
+<ul>
+  {{#each projects as |project|}}
+    <li><h2>{{link-to project.title 'project' project.id}}</h2></li>
+  {{/each}}
+</ul>

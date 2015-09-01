@@ -6,6 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('project', { path: 'project/:project_id'}, function() {
+    this.route('language', { path: 'language/:language_id'});
+  });
 });
 
 export default Router;

@@ -1,11 +1,17 @@
-/*
-  This is an example factory definition.
-
-  Create more files in this directory to define additional factories.
-*/
-import Mirage/*, {faker} */ from 'ember-cli-mirage';
+import Mirage from 'ember-cli-mirage';
 
 export default Mirage.Factory.extend({
+  title(i) { return `Project ${i}` },
+
+  users: [
+    {name: 'foo', token: 'footoken'},
+    {name: 'bar', token: 'bartoken'}
+  ],
+
+  admins: [
+    {name: 'foo', token: 'footoken'}
+  ]
+
   // name: 'Pete',                         // strings
   // age: 20,                              // numbers
   // tall: true,                           // booleans
