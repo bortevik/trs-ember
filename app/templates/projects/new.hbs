@@ -1,0 +1,8 @@
+<form>
+  <div class="form-group">
+    <label for="project-title">Title</label>
+    {{input value=project.title id="project-title" placeholder="Title" class="form-control"}}
+  </div>
+
+  <button type="submit" class="btn btn-primary" {{action "save"}}>Save</button>
+</form>

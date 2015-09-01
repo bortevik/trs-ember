@@ -6,8 +6,13 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('project', { path: 'project/:project_id'}, function() {
-    this.route('language', { path: 'language/:language_id'});
+  this.route('projects', function() {
+    this.route('project', { path: ':project_id' }, function() {
+      this.route('language', { path: 'language/:language_id'});
+      this.route('edit');
+    });
+
+    this.route('new');
   });
 });
 

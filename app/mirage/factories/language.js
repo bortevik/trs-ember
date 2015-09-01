@@ -6,6 +6,6 @@ export default Mirage.Factory.extend({
     return {
       foo: `foo ${i}`,
       bar: `bar ${i}`
-    }
+    };
   }
 });
