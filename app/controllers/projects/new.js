@@ -20,6 +20,13 @@ export default Ember.Controller.extend({
 
     addAdmin: function(){
       this.get('project.admins').pushObject(Ember.Object.create({name: null, token: null}));
+    },
+
+    createLanguage: function(language){
+      ajax(`/languages/${language}`, {
+        type: 'POST',
+        data: JSON.stringify({params: {}})
+      });
     }
   }
 });

@@ -19,6 +19,18 @@ export default function() {
   this.get('/projects');
   this.get('/project/:id');
 
+  this.post('/languages/:id/document', () => {
+    return {};
+  });
+
+  this.delete('/languages/:id', () => {
+    return {};
+  });
+
+  this.post('/languages/:id', () => {
+    return {};
+  });
+
   this.post('/projects', (db, request) => {
     const params = JSON.parse(request.requestBody);
     const newProject = {
