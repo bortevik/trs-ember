@@ -14,6 +14,14 @@ export default Ember.Controller.extend({
       }).then(() => {
         this.transitionToRoute('projects.project', projectId);
       });
+    },
+
+    addUser: function(){
+      this.get('project.users').pushObject(Ember.Object.create({name: null, token: null}));
+    },
+
+    addAdmin: function(){
+      this.get('project.admins').pushObject(Ember.Object.create({name: null, token: null}));
     }
   }
 });
