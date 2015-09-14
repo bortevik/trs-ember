@@ -1,5 +1,3 @@
 <ul>
-  {{#each-in language.data as |key value|}}
-    <li><b>{{key}}:</b> {{value}}</li>
-  {{/each-in}}
+  {{json-edit json=language.data language=language saveLanguage="saveLanguage"}}
 </ul>
