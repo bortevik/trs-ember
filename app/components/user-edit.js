@@ -24,7 +24,6 @@ export default Ember.Component.extend({
     },
 
     cancel: function(){
-      let user = this.get('user');
       this.set('user.name', this.get('userCopy.name'));
       this.set('user.token', this.get('userCopy.token'));
       this.toggleProperty('isNotEditing');
